@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#f7f8fc">
-  <meta name="description" content="AI2P — ваш переходник к ИИ-сервисам. Arena, Qwen, Z.ai и DeepSeek: ссылки, описания и скачиваемые инструкции в одном каталоге.">
+  <meta name="description" content="AI2P — ваш переходник к ИИ-сервисам. Arena, Qwen, Z.ai и DeepSeek: ссылки, описания и инструкции в одном каталоге.">
   <title>AI2P — ваш переходник к ИИ</title>
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23445cf5'/%3E%3Cpath d='M16 44 28 18h8l12 26h-9l-2-5H27l-2 5zm14-12h5l-2.5-7z' fill='white'/%3E%3C/svg%3E">
   <style>
@@ -106,11 +106,12 @@
     .tag-purple{background:#f5f1ff;border-color:#eee7ff;color:#795bb5}
     .tag-blue{background:#eff3ff;border-color:#e5ecff;color:#5873b5}
     .instruction-cell{text-align:center}
-    .download-button{display:flex;align-items:center;justify-content:center;gap:9px;width:100%;border:1px solid #dfe4f1;border-radius:8px;background:#fff;padding:10px 12px;color:#536079;font-size:12px;font-weight:650;transition:background .2s,border-color .2s,color .2s,transform .2s}
-    .download-button .icon{width:15px;height:15px;color:#8591ab;transition:color .2s}
-    .download-button:hover{background:var(--blue-soft);border-color:#c5ceff;color:var(--blue);transform:translateY(-1px)}
-    .download-button:hover .icon{color:var(--blue)}
-    .file-meta{display:block;font-size:10px;color:#8791a5;margin-top:6px;letter-spacing:.2px}
+    .instruction-link{display:inline-flex;align-items:center;justify-content:center;gap:6px;color:var(--blue);font-size:12px;font-weight:650;line-height:1.5;text-decoration:none;border-bottom:1px solid transparent;transition:color .2s,border-color .2s}
+    .instruction-link .icon{width:13px;height:13px;color:currentColor}
+    .instruction-link:hover{color:var(--blue-dark);border-bottom-color:currentColor}
+    .similar-note{margin:0;font-size:11px;line-height:1.7;color:#8791a5;text-align:center}
+    .similar-note a{color:#5873b5;text-decoration:none;border-bottom:1px solid #d5dbec;transition:color .2s,border-color .2s}
+    .similar-note a:hover{color:var(--blue);border-bottom-color:var(--blue)}
     .catalog-footnote{display:flex;align-items:center;justify-content:space-between;gap:15px;margin-top:13px;color:#969eae;font-size:10px}
     .catalog-footnote span{display:flex;align-items:center;gap:6px}
     .catalog-footnote .icon{width:13px;height:13px}
@@ -139,8 +140,8 @@
     .back-top .icon{width:13px;height:13px}
     @media(min-width:1400px){.hero{padding-top:82px;padding-bottom:78px}}
     @media(max-width:1000px){.hero{gap:35px;grid-template-columns:1.15fr .85fr}.catalog-columns,.service-row{grid-template-columns:185px minmax(0,1fr) 140px;gap:20px;padding-inline:22px}.service-identity{gap:10px}.service-link{font-size:15px}.service-icon{width:40px;height:40px;font-size:23px}.header-nav{margin-right:5px}.hero-aside{display:none}h1{font-size:49px}.network{height:280px}.steps{gap:22px}}
-    @media(max-width:760px){.container{width:calc(100% - 40px)}.site-header{height:74px}.header-note{display:none}.header-nav{gap:22px;font-size:12px;margin:0}.brand-name{font-size:25px}.brand-mark{width:33px;height:33px}.hero{grid-template-columns:1fr;gap:32px;padding:43px 0 42px}.hero-copy{max-width:540px}h1{font-size:clamp(40px,7.8vw,57px);letter-spacing:-2px;margin-top:17px}.hero-description{max-width:470px;font-size:14px}.hero-aside{display:flex}.network{height:235px;width:100%;max-width:540px;justify-self:center}.network::before{width:175px;height:175px}.network-hub{width:76px;height:76px;font-size:21px;border-radius:21px}.network-node{width:44px;height:44px;font-size:22px}.node-arena{left:20%;top:13%}.node-qwen{right:20%;top:13%}.node-z{left:20%;bottom:22%}.node-deepseek{right:20%;bottom:22%}.network-caption{bottom:12px;font-size:8px}.network-label{font-size:8px}.section-heading{align-items:stretch;flex-direction:column;gap:18px;margin-bottom:17px}h2{font-size:25px}.search-box{width:100%;height:44px}.search-box input{font-size:13px}.catalog-columns{display:none}.service-row{grid-template-columns:minmax(0,1fr) 125px;gap:17px 12px;padding:22px;min-height:0}.service-identity{grid-column:1;grid-row:1;gap:12px}.service-link{font-size:17px}.service-icon{width:43px;height:43px}.instruction-cell{grid-column:2;grid-row:1}.service-description{grid-column:1/-1;grid-row:2;font-size:13px}.service-category{font-size:10px}.access-note{font-size:11px}.tag{font-size:10px}.download-button{font-size:11px;padding:10px}.file-meta{font-size:8px}.catalog-footnote{align-items:flex-start;font-size:9px}.catalog-footnote span:last-child{display:none}.how-section{margin-top:36px;margin-bottom:35px;padding:25px}.how-header{margin-bottom:23px}.how-header>span{display:none}.steps{grid-template-columns:1fr;gap:22px}.step p{max-width:none;font-size:12px}.step h3{font-size:13px}.footer-inner{align-items:flex-start}.footer-brand{flex-direction:column;align-items:flex-start;gap:9px}.footer-right{flex-direction:column;align-items:flex-end;gap:9px}.footer-brand p{max-width:210px}.site-footer{padding:23px 0}}
-    @media(max-width:390px){.container{width:calc(100% - 32px)}.header-nav{gap:14px;font-size:11px}.hero-actions{gap:12px}.hero-aside{font-size:9px}.primary-button{gap:15px;padding:12px 15px}.service-row{padding:18px 16px;grid-template-columns:minmax(0,1fr) 105px}.service-link{font-size:15px}.service-identity{gap:9px}.service-icon{width:36px;height:36px;border-radius:10px;font-size:21px}.download-button{gap:6px;padding:9px 7px;font-size:10px}.how-section{padding:22px 19px}h1{font-size:39px}}
+    @media(max-width:760px){.container{width:calc(100% - 40px)}.site-header{height:74px}.header-note{display:none}.header-nav{gap:22px;font-size:12px;margin:0}.brand-name{font-size:25px}.brand-mark{width:33px;height:33px}.hero{grid-template-columns:1fr;gap:32px;padding:43px 0 42px}.hero-copy{max-width:540px}h1{font-size:clamp(40px,7.8vw,57px);letter-spacing:-2px;margin-top:17px}.hero-description{max-width:470px;font-size:14px}.hero-aside{display:flex}.network{height:235px;width:100%;max-width:540px;justify-self:center}.network::before{width:175px;height:175px}.network-hub{width:76px;height:76px;font-size:21px;border-radius:21px}.network-node{width:44px;height:44px;font-size:22px}.node-arena{left:20%;top:13%}.node-qwen{right:20%;top:13%}.node-z{left:20%;bottom:22%}.node-deepseek{right:20%;bottom:22%}.network-caption{bottom:12px;font-size:8px}.network-label{font-size:8px}.section-heading{align-items:stretch;flex-direction:column;gap:18px;margin-bottom:17px}h2{font-size:25px}.search-box{width:100%;height:44px}.search-box input{font-size:13px}.catalog-columns{display:none}.service-row{grid-template-columns:minmax(0,1fr) 125px;gap:17px 12px;padding:22px;min-height:0}.service-identity{grid-column:1;grid-row:1;gap:12px}.service-link{font-size:17px}.service-icon{width:43px;height:43px}.instruction-cell{grid-column:2;grid-row:1}.service-description{grid-column:1/-1;grid-row:2;font-size:13px}.service-category{font-size:10px}.access-note{font-size:11px}.tag{font-size:10px}.instruction-link{font-size:11px}.similar-cell{grid-column:1/-1;grid-row:3;text-align:left}.similar-note{font-size:12px;text-align:left}.catalog-footnote{align-items:flex-start;font-size:9px}.catalog-footnote span:last-child{display:none}.how-section{margin-top:36px;margin-bottom:35px;padding:25px}.how-header{margin-bottom:23px}.how-header>span{display:none}.steps{grid-template-columns:1fr;gap:22px}.step p{max-width:none;font-size:12px}.step h3{font-size:13px}.footer-inner{align-items:flex-start}.footer-brand{flex-direction:column;align-items:flex-start;gap:9px}.footer-right{flex-direction:column;align-items:flex-end;gap:9px}.footer-brand p{max-width:210px}.site-footer{padding:23px 0}}
+    @media(max-width:390px){.container{width:calc(100% - 32px)}.header-nav{gap:14px;font-size:11px}.hero-actions{gap:12px}.hero-aside{font-size:9px}.primary-button{gap:15px;padding:12px 15px}.service-row{padding:18px 16px;grid-template-columns:minmax(0,1fr) 105px}.service-link{font-size:15px}.service-identity{gap:9px}.service-icon{width:36px;height:36px;border-radius:10px;font-size:21px}.instruction-link{gap:5px;font-size:10px}.how-section{padding:22px 19px}h1{font-size:39px}}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}}
   </style>
 </head>
@@ -181,10 +182,10 @@
       <div class="hero-copy">
         <div class="eyebrow"><span class="eyebrow-line"></span>ИИ ближе, чем кажется</div>
         <h1 id="hero-title">Нужный ИИ.<br><span>Без лишних шагов.</span></h1>
-        <p class="hero-description">Сервисы для идей, кода и поиска — в одном месте. Выберите площадку, скачайте инструкцию и начните работать.</p>
+        <p class="hero-description">Сервисы для идей, кода и поиска — в одном месте. Выберите площадку, откройте инструкцию и начните работать.</p>
         <div class="hero-actions">
           <a class="primary-button" href="#catalog">Выбрать сервис<svg class="icon" aria-hidden="true"><use href="#i-arrow-down-right"/></svg></a>
-          <span class="hero-aside"><svg class="icon" aria-hidden="true"><use href="#i-file"/></svg>Инструкции в HTML</span>
+          <span class="hero-aside"><svg class="icon" aria-hidden="true"><use href="#i-file"/></svg>Инструкции по ссылкам</span>
         </div>
       </div>
       <div class="network" aria-hidden="true">
@@ -218,7 +219,7 @@
       <div class="catalog">
         <div class="catalog-columns" aria-hidden="true"><span>Ссылка на сервис</span><span>Описание</span><span>Инструкция</span></div>
 
-        <!-- ARENA: замените instructions/arena.html своим файлом или измените href ниже. -->
+        <!-- ARENA: ссылка на инструкцию (облако Mail.ru). Меняйте только href. Атрибут download не нужен. -->
         <article class="service-row" data-service="arena" data-search="arena арена arena.ai доступ продавец сравнение моделей общение идеи фото фотографии видео генерация изображения контент">
           <div class="service-identity">
             <div class="service-icon arena-icon" aria-hidden="true">A</div>
@@ -229,12 +230,11 @@
             <p class="access-note"><svg class="icon" aria-hidden="true"><use href="#i-chat"/></svg><span>Доступы вы можете получить <strong>в чате с продавцом</strong>.</span></p>
           </div>
           <div class="instruction-cell">
-            <a class="download-button" href="instructions/arena.html" download="AI2P-Arena-instruction.html"><svg class="icon" aria-hidden="true"><use href="#i-download"/></svg>Скачать</a>
-            <span class="file-meta">HTML · инструкция</span>
+            <a class="instruction-link" href="https://cloud.mail.ru/public/qd86/Kb1u4XKs9" target="_blank" rel="noopener noreferrer" aria-label="Инструкция для Arena.ai — откроется в новой вкладке">Открыть инструкцию<svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>
           </div>
         </article>
 
-        <!-- QWEN: замените instructions/qwen.html своим файлом или измените href ниже. -->
+        <!-- QWEN: ссылка на инструкцию (облако Mail.ru). Меняйте только href. Атрибут download не нужен. -->
         <article class="service-row" data-service="qwen" data-search="qwen чвен кен qwen3.8 max архитектура проектирование идеи мощная модель">
           <div class="service-identity">
             <div class="service-icon qwen-icon" aria-hidden="true">Q</div>
@@ -245,12 +245,11 @@
             <div class="tags"><span class="tag tag-purple"><svg class="icon" aria-hidden="true"><use href="#i-layers"/></svg>Архитектура</span><span class="tag tag-purple">Сложные идеи</span></div>
           </div>
           <div class="instruction-cell">
-            <a class="download-button" href="instructions/qwen.html" download="AI2P-Qwen-instruction.html"><svg class="icon" aria-hidden="true"><use href="#i-download"/></svg>Скачать</a>
-            <span class="file-meta">HTML · инструкция</span>
+            <a class="instruction-link" href="https://cloud.mail.ru/public/TdrJ/8tLt2ur3C" target="_blank" rel="noopener noreferrer" aria-label="Инструкция для Qwen — откроется в новой вкладке">Открыть инструкцию<svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>
           </div>
         </article>
 
-        <!-- Z.AI: замените instructions/z-ai.html своим файлом или измените href ниже. -->
+        <!-- Z.AI: вместо инструкции пояснение. Текст меняется в блоке .similar-note. -->
         <article class="service-row" data-service="z-ai" data-search="z.ai зед glm-5.3 glm-5.3-flash код кодинг поиск рассуждения думать быстрый">
           <div class="service-identity">
             <div class="service-icon z-icon" aria-hidden="true">Z</div>
@@ -260,13 +259,12 @@
             <p>Шикарная <strong>GLM-5.3</strong>: пишет код, ищет информацию, думает. Есть быстрая <strong>GLM-5.3-Flash</strong> — работает не хуже, когда важен темп.</p>
             <div class="tags"><span class="tag"><svg class="icon" aria-hidden="true"><use href="#i-code"/></svg>Код</span><span class="tag"><svg class="icon" aria-hidden="true"><use href="#i-search"/></svg>Поиск</span><span class="tag">Рассуждения</span></div>
           </div>
-          <div class="instruction-cell">
-            <a class="download-button" href="instructions/z-ai.html" download="AI2P-Z-ai-instruction.html"><svg class="icon" aria-hidden="true"><use href="#i-download"/></svg>Скачать</a>
-            <span class="file-meta">HTML · инструкция</span>
+          <div class="instruction-cell similar-cell">
+            <p class="similar-note">Принцип работы схож с <a href="https://arena.ai" target="_blank" rel="noopener noreferrer">arena.ai</a> и <a href="https://chat.qwen.ai/" target="_blank" rel="noopener noreferrer">Qwen</a></p>
           </div>
         </article>
 
-        <!-- DEEPSEEK: замените instructions/deepseek.html своим файлом или измените href ниже. -->
+        <!-- DEEPSEEK: вместо инструкции пояснение. Текст меняется в блоке .similar-note. -->
         <article class="service-row" data-service="deepseek" data-search="deepseek дипсик deepseek 4.1 flash глубокое мышление умный поиск быстрый повседневные задачи">
           <div class="service-identity">
             <div class="service-icon deepseek-icon" aria-hidden="true">D</div>
@@ -276,9 +274,8 @@
             <p><strong>DeepSeek 4.1 Flash</strong> — быстрая, не суперумная модель. Для лучшего результата включайте оба режима:</p>
             <div class="tags"><span class="tag tag-blue"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Глубокое мышление</span><span class="tag tag-blue"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Умный поиск</span></div>
           </div>
-          <div class="instruction-cell">
-            <a class="download-button" href="instructions/deepseek.html" download="AI2P-DeepSeek-instruction.html"><svg class="icon" aria-hidden="true"><use href="#i-download"/></svg>Скачать</a>
-            <span class="file-meta">HTML · инструкция</span>
+          <div class="instruction-cell similar-cell">
+            <p class="similar-note">Принцип работы схож с <a href="https://arena.ai" target="_blank" rel="noopener noreferrer">arena.ai</a> и <a href="https://chat.qwen.ai/" target="_blank" rel="noopener noreferrer">Qwen</a></p>
           </div>
         </article>
 
@@ -289,14 +286,14 @@
           <button class="text-button" id="reset-search" type="button">Показать все сервисы</button>
         </div>
       </div>
-      <div class="catalog-footnote"><span><svg class="icon" aria-hidden="true"><use href="#i-file"/></svg>Скачайте HTML-инструкцию и откройте её на своём устройстве.</span><span>Ссылки открываются в новой вкладке<svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></span></div>
+      <div class="catalog-footnote"><span><svg class="icon" aria-hidden="true"><use href="#i-file"/></svg>Если инструкция есть, она откроется по ссылке в новой вкладке.</span><span>Ссылки открываются в новой вкладке<svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></span></div>
     </section>
 
     <section class="how-section" id="how-it-works" aria-labelledby="how-title">
       <div class="how-header"><h2 id="how-title">Три шага — и вы в деле</h2><span>Ничего лишнего. Только нужное.</span></div>
       <div class="steps">
         <div class="step"><span class="step-number">01</span><div><h3>Найдите свой сервис</h3><p>Сравните описания и выберите ИИ под задачу.</p></div></div>
-        <div class="step"><span class="step-number">02</span><div><h3>Скачайте инструкцию</h3><p>HTML-файл сохранится на вашем устройстве. Откройте его в браузере.</p></div></div>
+        <div class="step"><span class="step-number">02</span><div><h3>Откройте инструкцию</h3><p>Если у сервиса есть инструкция, перейдите по ссылке в его карточке.</p></div></div>
         <div class="step"><span class="step-number">03</span><div><h3>Переходите и работайте</h3><p>Откройте сайт по ссылке. Для Arena доступы уточняйте в чате с продавцом.</p></div></div>
       </div>
     </section>
@@ -356,5 +353,5 @@
       });
     })();
   </script>
-<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a52972e8b9d7d4ca',t:'MTc5MzM1MzEyNQ=='};var l=window.parent.location,o;try{o=new URL(l.origin).origin}catch(e){try{o=new URL(new URL(l.href).origin).origin}catch(e){o=''}}var u='/cdn-cgi/challenge-platform/scripts/jsd/main.js?ray=a52972e8b9d7d4ca',a=document.createElement('script');a.src=o?new URL(u,o).href:u;document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a52c77936d8ed4ca',t:'MTc5MzM4NDc3Mw=='};var l=window.parent.location,o;try{o=new URL(l.origin).origin}catch(e){try{o=new URL(new URL(l.href).origin).origin}catch(e){o=''}}var u='/cdn-cgi/challenge-platform/scripts/jsd/main.js?ray=a52c77936d8ed4ca',a=document.createElement('script');a.src=o?new URL(u,o).href:u;document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
